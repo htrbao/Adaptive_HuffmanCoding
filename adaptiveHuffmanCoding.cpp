@@ -94,8 +94,6 @@ void slideAndIncrement(node* crr)
 	}
 
 	crr->amount += 1;
-	preOrder(HuffTree);
-	cout << endl;
 	slideAndIncrement(crr->parent);
 }
 
@@ -225,12 +223,8 @@ int main()
 	for(long i = 0; i < str.size(); i++)
 	{
 		ans += encode(str[i] - 'a');
-		preOrder(HuffTree);
-		cout << endl << ans << endl;
 		//cout << encode(str[i] - 'a');
 	}
-	preOrder(HuffTree);
-	cout << endl;
 	cout << ans << endl;
 	deleteTree(HuffTree);
 	//for(long i = 0; i < ans.size(); i++)
